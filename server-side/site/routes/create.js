@@ -17,8 +17,8 @@ MongoClient.connect('mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PWD
 });
 
 var emailServer  = emailjs.server.connect({
-   user:    "bhuvnesh.pf@gmail.com", 
-   password:"9769123932", 
+   user:    process.env.EMAIL, 
+   password:process.env.EPASSWORD, 
    host:    "smtp.gmail.com", 
    ssl:     true
 });
