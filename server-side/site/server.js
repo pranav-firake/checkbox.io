@@ -8,7 +8,7 @@ var express = require('express'),
 	study = require('./routes/study.js'),
 	admin = require('./routes/admin.js')
 	;
-//require('dotenv').config({silent: true});
+require('dotenv').config({silent: true});
 var app = express();
 
 app.configure(function () {
