@@ -95,7 +95,7 @@ DataStudyModel = function( incoming, token )
               "Public data study url: \n" + 
               self.publicLink + "\n"
             ,
-            from:    "Chris Parnin <support@checkbox.io>",
+            from:    "Pranav Firake <support@checkbox.io>",
             to:      self.researcherName + "<"+ self.contact +">",
             subject: "checkbox.io: data study created"
         };
