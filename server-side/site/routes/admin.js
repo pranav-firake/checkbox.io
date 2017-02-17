@@ -9,8 +9,8 @@ var Server = mongo.Server,
     ObjectID = mongo.ObjectID;
  
 var emailServer  = emailjs.server.connect({
-   user:    "supportemail@domain.com", 
-   password:"supportpwd", 
+   user:    process.env.EMAIL, 
+   password:process.env.EPASSWORD, 
    host:    "smtp.gmail.com", 
    ssl:     true
 });
