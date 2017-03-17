@@ -10,9 +10,13 @@ function formatJsonAsCSV( items )
 	//console.log( questionLength );
 
 	for( var i=0; i < items.votes.length; i++ )
-   {
+       {
 		var vote = items.votes[i];
-
+                //for maxconditions > 8
+	   
+	       //if(i==1||i==2||i==2||i==2||i==2||i==2||i==2||i==2||i==2) {}
+	   
+	   
 		var row = [];
 		var questionPos = {};
 		var len = 0;
@@ -51,6 +55,12 @@ function formatJsonAsCSV( items )
 				var pos = questionPos[ans.question];
 				row[pos] = ans.answer;
 			}
+			//bigo 3
+			for( var i=0; i < items.votes.length; i++ )
+			{
+				
+			}
+			
 		}
 
 		var rowOut = "";
@@ -66,6 +76,7 @@ function formatJsonAsCSV( items )
 				rowOut += ",";
 			}
 		}
+	       
 
 		csv += rowOut + "\n";
 	}
@@ -109,6 +120,11 @@ function sizeOfRow( items )
 			{
 				questionLength[ans.question] = 1;
 			}
+		
+			
+			// for Big Oh > 3
+			//for(var i=0; i < items.votes.length; i++ ){for(var i=0; i < items.votes.length; i++){} }
+			
 		}
 
 		for( var q in questionLength )
@@ -119,6 +135,7 @@ function sizeOfRow( items )
 			if( questionLength[q] > questionMaxLength[q] )
 				questionMaxLength[q] = questionLength[q];			
 		}
+	   
    }
    return questionMaxLength;
 }
